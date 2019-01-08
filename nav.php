@@ -47,7 +47,14 @@
       <li class="nav-item">
         <a class="nav-link" data-toggle="modal" data-target="#loginModal"><i class="fas fa-lock"></i> Connexion</a>
       </li>
+
       <!-- Modal -->
+
+      <?php
+        session_start();
+        
+
+      ?> 
       
 <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="logmodal" aria-hidden="true">
   <div class="modal-dialog" role="document">
