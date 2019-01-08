@@ -12,11 +12,11 @@
 
 <body>
   <header class="img-fluid container-fluid">
-    <?php include('./script/header.php'); ?>
+    <?php include('header.php'); ?>
   </header>
 
   <nav>
-    <?php include('./script/nav.php'); ?>
+    <?php include('nav.php'); ?>
   </nav>
 
 
@@ -60,7 +60,7 @@
   <div class="card-body">
     <h5 class="card-title">Lord of The Drinks</h5>
     <p class="card-text">La différence entre une bière et un chasseur, c'est que la bière, ils la font sans alcool...</p>
-    <a href="./page/details.php" class="btn btn-danger">Voir l'article...</a>
+    <a href="details.php" class="btn btn-danger">Voir l'article...</a>
         </div>
       </div>
     </div>
@@ -123,7 +123,7 @@
 
 
   <footer class="class">
-    <?php include('./script/footer.php'); ?>
+    <?php include('footer.php'); ?>
   </footer>
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

@@ -5,19 +5,19 @@
   <meta charset="utf-8">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-  <link rel="stylesheet" href="../style/style.css">
+  <link rel="stylesheet" href="style/style.css">
   <link href="https://fonts.googleapis.com/css?family=Permanent+Marker|Titillium+Web" rel="stylesheet">
   <title>L33T SH0PPING</title>
 </head>
 
 <body>
   <header class="img-fluid container-fluid">
-    <?php include('../script/headerpage.php'); ?>
+    <?php include('header.php'); ?>
   </header>
 
 
   <nav>
-    <?php include('../script/navpage.php'); ?>
+    <?php include('nav.php'); ?>
   </nav>
 
   <nav aria-label="breadcrumb">
@@ -33,7 +33,7 @@
     <div class="container-fluid">
   <div class="row">
     <div class="col">
-      <img class="rounded img-thumbnail" src="../img/tee1.jpg" alt="">
+      <img class="rounded img-thumbnail" src="./img/tee1.jpg" alt="">
     </div>
     <div class="col">
       <h4>Detail du produit</h4>
@@ -118,7 +118,7 @@
       </div>
       <div class="modal-body index-card">
         <div class="card bg-dark" style="width: 14rem;">
-          <img class="card-img-top" src="../img/tee1.jpg" alt="Card image cap">
+          <img class="card-img-top" src="img/tee1.jpg" alt="Card image cap">
           <div class="card-body text-white">
             <h5>Couleur: Noir</h5>
             <h5>Taille: XL</h5>
@@ -129,7 +129,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Continuer vos achats</button>
-        <a href="./panier.php" role="button" class="btn btn-danger">Voir le panier</a>
+        <a href="panier.php" role="button" class="btn btn-danger">Voir le panier</a>
       </div>
     </div>
   </div>
@@ -140,7 +140,7 @@
   <div class="row index-card">
     <div class="col">
       <div class="card bg-dark" style="width: 10rem;">
-        <img class="card-img-top" src="../img/tee3.jpg" alt="Card image cap">
+        <img class="card-img-top" src="img/tee3.jpg" alt="Card image cap">
         <div class="card-body">
           <a href="#" class="btn btn-danger mt-3">Voir l'article...</a>
         </div>
@@ -148,7 +148,7 @@
     </div>
     <div class="col">
       <div class="card bg-dark" style="width: 10rem;">
-        <img class="card-img-top" src="../img/tee4.jpg" alt="Card image cap">
+        <img class="card-img-top" src="img/tee4.jpg" alt="Card image cap">
         <div class="card-body">
           <a href="#" class="btn btn-danger mt-3">Voir l'article...</a>
         </div>
@@ -156,7 +156,7 @@
     </div>
     <div class="col">
       <div class="card bg-dark" style="width: 10rem;">
-        <img class="card-img-top" src="../img/tee5.jpg" alt="Card image cap">
+        <img class="card-img-top" src="img/tee5.jpg" alt="Card image cap">
         <div class="card-body">
           <a href="#" class="btn btn-danger mt-3">Voir l'article...</a>
         </div>
@@ -169,13 +169,13 @@
 
 
   <footer class="class">
-    <?php include('../script/footerpage.php'); ?>
+    <?php include('footer.php'); ?>
   </footer>
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-    <script src="script/script.js" async charset="utf-8"></script>
+  
 </body>
 
 </html>
