@@ -27,7 +27,7 @@
       <li class="breadcrumb-item text-secondary">Tee-shirts</li>
       <?php
         $bdd = new PDO('mysql:host=localhost; dbname=backend','root','Password123!');
-        $requete = $bdd->query('SELECT * FROM produits WHERE id_produits');
+        $requete = $bdd->query("SELECT * FROM produits WHERE id_produits=".$_GET["id"]);
 
         if ($data = $requete->fetch()) {
           echo '  
