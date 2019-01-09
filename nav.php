@@ -49,12 +49,6 @@
       </li>
 
       <!-- Modal -->
-
-      <?php
-        session_start();
-        
-
-      ?> 
       
 <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="logmodal" aria-hidden="true">
   <div class="modal-dialog" role="document">
