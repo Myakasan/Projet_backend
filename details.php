@@ -25,7 +25,13 @@
       <li class="breadcrumb-item text-secondary">Acceuil</li>
       <li class="breadcrumb-item text-secondary">Hommes</li>
       <li class="breadcrumb-item text-secondary">Tee-shirts</li>
-      <li class="breadcrumb-item active text-danger" aria-current="page">Lord of the drinks</li>
+      <?php
+        $bdd = new PDO('mysql:host=localhost; dbname=backend','root','Password123!');
+        $requete = $bdd->query('SELECT * FROM produits WHERE id_produits');
+
+        if ($data = $requete->fetch()) {
+          echo '  
+      <li class="breadcrumb-item active text-danger" aria-current="page">'.$data["reference"].'</li>
     </ol>
   </nav>
   <hr>
@@ -37,10 +43,10 @@
     </div>
     <div class="col">
       <h4>Detail du produit</h4>
-      <h5>T-shirt Homme Lord of The Drinks</h5>
-      <p>Un classique sans compromis : vous allez adorer ce T-shirt simple et classique.
-         Un basique à porter en toutes occasions.</p>
+      <h5>'.$data["reference"].'</h5>
+      <p>'.$data["description_complet"].'</p>
       <ul>
+
         <li>Finitions haut de gamme avec doubles coutures</li>
         <li>En tailles 2XL et 3XL, seules les couleurs suivantes sont proposées par le fabricant : blanc, noir, bleu marine, rouge et gris chiné</li>
         <li>Coupe droite</li>
@@ -101,7 +107,7 @@
           <option>5</option>
         </select>
       </div>
-      <h3 style="text-align: center;">Prix : 22 Euros</h3>
+      <h3 style="text-align: center;">'.$data["prix"].'</h3>
       <!-- MODAL TRIGGER -->
   <button type="button" class="btn btn-danger btn-lg btn-block" data-toggle="modal" data-target="#modalresume">Ajouter au panier</button>
     </div>
@@ -133,8 +139,10 @@
       </div>
     </div>
   </div>
-</div>
-
+</div>';
+}
+$requete->closeCursor();
+?>
 
     <h1 class="mt-3 mb-3" style="text-align: center;">Ces articles pourraient vous intérésser !</h1>
   <div class="row index-card">

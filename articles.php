@@ -51,151 +51,26 @@
 
     <div class="index-card col-10">
         <div class="row">
-
-          
-
           <?php
             $bdd = new PDO('mysql:host=localhost; dbname=backend','root','Password123!');
             $requete = $bdd->query('SELECT * FROM produits');
 
             while ($data = $requete->fetch()) {
               echo '<div class="col">
-            <div class="card bg-dark text-light" style="width: 18rem;">
-              <img class="card-img-top" src="img/tee1.jpg" alt="Card image cap">
-              <div class="card-body">
-                <h5 class="card-title">'.$data["reference"].'</h5>
-                <p class="card-text">'.$data["description"].'</p>
-                <a href="details.php" class="btn btn-danger">Voir l\'article...</a>
-              </div>
-            </div>
-          </div>';
+                <div class="card bg-dark text-light" style="width: 18rem;">
+                  <img class="card-img-top" src="img/tee1.jpg" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title">'.$data["reference"].'</h5>
+                      <p class="card-text">'.$data["description"].'</p>';
+              echo '
+                      <a href="details.php?id='.$data["id_produits"].'" class="btn btn-danger">Voir l\'article...</a>
+                    </div>
+                </div>
+            </div>';
             }
 
             $requete->closeCursor();
           ?>
-
-          <!-- <div class="col">
-            <div class="card bg-dark text-light" style="width: 18rem;">
-              <img class="card-img-top" src="img/tee2.jpg" alt="Card image cap">
-              <div class="card-body">
-                <h5 class="card-title">Do It 4 Billy</h5>
-                <p class="card-text">Ce que tu fais de valeureux aujourd'hui inspire les actions des autres dans le futur.</p>
-                <a href="#" class="btn btn-danger">Voir l'article...</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col">
-            <div class="card bg-dark text-light" style="width: 18rem;">
-              <img class="card-img-top" src="img/tee3.jpg" alt="Card image cap">
-              <div class="card-body">
-                <h5 class="card-title">Call me Unicorn</h5>
-                <p class="card-text">Dieu existe-t-il ? Qui sait ? Y a-t-il une licorne en colère sur la face cachée de la lune ?</p>
-                <a href="#" class="btn btn-danger">Voir l'article...</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col">
-            <div class="card bg-dark text-light" style="width: 18rem;">
-              <img class="card-img-top" src="img/tee4.jpg" alt="Card image cap">
-              <div class="card-body">
-                <h5 class="card-title">I'll be back !</h5>
-                <p class="card-text">Toujours par deux ils vont. Ni plus, ni moins. Le maître et son tee-shirt ...</p>
-                <a href="#" class="btn btn-danger">Voir l'article...</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col">
-            <div class="card bg-dark text-light" style="width: 18rem;">
-              <img class="card-img-top" src="img/tee5.jpg" alt="Card image cap">
-              <div class="card-body">
-                <h5 class="card-title">Level UP !</h5>
-                <p class="card-text">Moins tu dors plus t'es fort ... Qu'ils disaient...</p>
-                <a href="#" class="btn btn-danger">Voir l'article...</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col">
-            <div class="card bg-dark text-light" style="width: 18rem;">
-              <img class="card-img-top" src="img/tee6.jpg" alt="Card image cap">
-              <div class="card-body">
-                <h5 class="card-title">Eevee's Dream</h5>
-                <p class="card-text">On croit que les rêves, c’est fait pour se réaliser...</p>
-                <a href="#" class="btn btn-danger">Voir l'article...</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col">
-            <div class="card bg-dark text-light" style="width: 18rem;">
-              <img class="card-img-top" src="img/tee1.jpg" alt="Card image cap">
-              <div class="card-body">
-                <h5 class="card-title">Lord of The Drinks</h5>
-                <p class="card-text">La différence entre une bière et un chasseur, c'est que la bière, ils la font sans alcool...</p>
-                <a href="details.php" class="btn btn-danger">Voir l'article...</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col">
-            <div class="card bg-dark text-light" style="width: 18rem;">
-              <img class="card-img-top" src="img/tee2.jpg" alt="Card image cap">
-              <div class="card-body">
-                <h5 class="card-title">Do It 4 Billy</h5>
-                <p class="card-text">Ce que tu fais de valeureux aujourd'hui inspire les actions des autres dans le futur.</p>
-                <a href="#" class="btn btn-danger">Voir l'article...</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col">
-            <div class="card bg-dark text-light" style="width: 18rem;">
-              <img class="card-img-top" src="img/tee3.jpg" alt="Card image cap">
-              <div class="card-body">
-                <h5 class="card-title">Call me Unicorn</h5>
-                <p class="card-text">Dieu existe-t-il ? Qui sait ? Y a-t-il une licorne en colère sur la face cachée de la lune ?</p>
-                <a href="#" class="btn btn-danger">Voir l'article...</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col">
-            <div class="card bg-dark text-light" style="width: 18rem;">
-              <img class="card-img-top" src="img/tee4.jpg" alt="Card image cap">
-              <div class="card-body">
-                <h5 class="card-title">I'll be back !</h5>
-                <p class="card-text">Toujours par deux ils vont. Ni plus, ni moins. Le maître et son tee-shirt ...</p>
-                <a href="#" class="btn btn-danger">Voir l'article...</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col">
-            <div class="card bg-dark text-light" style="width: 18rem;">
-              <img class="card-img-top" src="img/tee5.jpg" alt="Card image cap">
-              <div class="card-body">
-                <h5 class="card-title">Level UP !</h5>
-                <p class="card-text">Moins tu dors plus t'es fort ... Qu'ils disaient...</p>
-                <a href="#" class="btn btn-danger">Voir l'article...</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col">
-            <div class="card bg-dark text-light" style="width: 18rem;">
-              <img class="card-img-top" src="img/tee6.jpg" alt="Card image cap">
-              <div class="card-body">
-                <h5 class="card-title">Eevee's Dream</h5>
-                <p class="card-text">On croit que les rêves, c’est fait pour se réaliser...</p>
-                <a href="#" class="btn btn-danger">Voir l'article...</a>
-              </div>
-            </div>
-          </div>
- -->
-
       </div>
     </div>
   </div>
