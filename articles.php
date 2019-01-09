@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="fr-FR" dir="ltr">
 
@@ -51,18 +52,29 @@
     <div class="index-card col-10">
         <div class="row">
 
-          <div class="col">
+          
+
+          <?php
+            $bdd = new PDO('mysql:host=localhost; dbname=backend','root','Password123!');
+            $requete = $bdd->query('SELECT * FROM produits');
+
+            while ($data = $requete->fetch()) {
+              echo '<div class="col">
             <div class="card bg-dark text-light" style="width: 18rem;">
               <img class="card-img-top" src="img/tee1.jpg" alt="Card image cap">
               <div class="card-body">
-                <h5 class="card-title">Lord of The Drinks</h5>
-                <p class="card-text">La différence entre une bière et un chasseur, c'est que la bière, ils la font sans alcool...</p>
-                <a href="details.php" class="btn btn-danger">Voir l'article...</a>
+                <h5 class="card-title">'.$data["reference"].'</h5>
+                <p class="card-text">'.$data["description"].'</p>
+                <a href="details.php" class="btn btn-danger">Voir l\'article...</a>
               </div>
             </div>
-          </div>
+          </div>';
+            }
 
-          <div class="col">
+            $requete->closeCursor();
+          ?>
+
+          <!-- <div class="col">
             <div class="card bg-dark text-light" style="width: 18rem;">
               <img class="card-img-top" src="img/tee2.jpg" alt="Card image cap">
               <div class="card-body">
@@ -182,7 +194,7 @@
               </div>
             </div>
           </div>
-
+ -->
 
       </div>
     </div>
