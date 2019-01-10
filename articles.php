@@ -58,7 +58,7 @@
             while ($data = $requete->fetch()) {
               echo '<div class="col">
                 <div class="card bg-dark text-light" style="width: 18rem;">
-                  <img class="card-img-top" src="img/tee1.jpg" alt="Card image cap">
+                  <img class="card-img-top" src='.$data["img"].' alt="Card image cap">
                     <div class="card-body">
                       <h5 class="card-title">'.$data["reference"].'</h5>
                       <p class="card-text">'.$data["description"].'</p>';

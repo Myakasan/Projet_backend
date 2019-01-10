@@ -39,7 +39,7 @@
     <div class="container-fluid">
   <div class="row">
     <div class="col">
-      <img class="rounded img-thumbnail" src="./img/tee1.jpg" alt="">
+      <img class="rounded img-thumbnail" src='.$data["img"].' alt="">
     </div>
     <div class="col">
       <h4>Detail du produit</h4>

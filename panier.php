@@ -1,3 +1,5 @@
+<?php include('server.php'); ?>
+
 <!DOCTYPE html>
 <html lang="fr-FR" dir="ltr">
 
@@ -24,92 +26,10 @@
 
   <div class="monPanierResponsive">
     <h1>Votre panier</h1>
+    
+    <button class="checkout">Valider la commande</button>
 
-  <div class="shopping-cart">
 
-    <div class="column-labels">
-      <label class="product-image">Image</label>
-      <label class="product-details">Product</label>
-      <label class="product-price">Prix</label>
-      <label class="product-quantity">Quantité</label>
-      <label class="product-removal">Remove</label>
-      <label class="product-line-price">Total</label>
-    </div>
-
-    <div class="product">
-      <div class="product-image">
-        <img src="./img/tee1.jpg">
-      </div>
-      <div class="product-details">
-        <div class="product-title">The Lord of Drinks</div>
-        <p class="product-description">Il n'y a pourtant pas de bar dans les ruines de la moria...</p>
-      </div>
-      <div class="product-price">22.00</div>
-      <div class="product-quantity">
-        <input type="number" value="2" min="1">
-      </div>
-      <div class="product-removal">
-        <button class="remove-product">
-          Retirer
-        </button>
-        <button class="update-product">
-          Mettre à jour
-        </button>
-        <button class="view-product">
-          Voir la fiche du produit
-        </button>
-      </div>
-      <div class="product-line-price">44.00</div>
-    </div>
-
-    <div class="product">
-      <div class="product-image">
-        <img src="./img/tee3.jpg">
-      </div>
-      <div class="product-details">
-        <div class="product-title">Call me Unicorn</div>
-        <p class="product-description">Qui à dis que les chats n'avaient pas le droit de rêver ?!?</p>
-      </div>
-      <div class="product-price">20.00</div>
-      <div class="product-quantity">
-        <input type="number" value="1" min="1">
-      </div>
-      <div class="product-removal">
-        <button class="remove-product">
-          Retirer
-        </button>
-        <button class="update-product">
-          Mettre à jour
-        </button>
-        <button class="view-product">
-          Voir la fiche du produit
-        </button>
-      </div>
-      <div class="product-line-price">20.00</div>
-    </div>
-
-    <div class="totals">
-      <div class="totals-item">
-        <label>Sous-total</label>
-        <div class="totals-value" id="cart-subtotal">64.00</div>
-      </div>
-      <div class="totals-item">
-        <label>TVA (20%)</label>
-        <div class="totals-value" id="cart-tax">12.80</div>
-      </div>
-      <div class="totals-item">
-        <label>Frais de livraison</label>
-        <div class="totals-value" id="cart-shipping">10.00</div>
-      </div>
-      <div class="totals-item totals-item-total">
-        <label>Total TTC</label>
-        <div class="totals-value" id="cart-total">96.80</div>
-      </div>
-    </div>
-
-        <button class="checkout">Valider la commande</button>
-
-  </div>
 
   </div>
 
